@@ -1,0 +1,36 @@
+<%= link_to("Back to Main Page", books_path, :class => 'back-link') %>
+
+<div class = "books new">
+  <h1>New Book Form</h1>
+
+  <%= form_for(@book) do |f| %>
+
+  <table summary = "book form fields">
+    <tr>
+      <th>Title</th>
+      <td><%= f.text_field(:title) %></td>
+    </tr>
+    <tr>
+      <th>Author</th>
+      <td><%= f.text_field(:author) %></td>
+    </tr>
+    <tr>
+      <th>Genre</th>
+      <td><%= f.text_field(:genre) %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= f.text_field(:price) %></td>
+    </tr>
+    <tr>
+      <th>Date Published</th>
+      <td><%= f.text_field(:publishdate) %></td>
+    </tr>
+  </table>
+
+  <div class = "form-buttons">
+    <%= f.submit("Add New Book") %>
+  </div>
+
+  <% end %>
+</div>
