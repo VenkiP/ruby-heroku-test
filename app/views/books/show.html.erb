@@ -1,0 +1,30 @@
+<%= link_to("Back to Main Page", books_path, :class => 'back-link') %>
+
+<%= link_to("Edit Book", edit_book_path(@book), :class => 'back-link') %>
+
+<div class = "books show">
+  <h1>Book Info</h1>
+
+  <table summary = "Book details">
+    <tr>
+      <th>Title</th>
+      <td><%= @book.title %></td>
+    </tr>
+    <tr>
+      <th>Author</th>
+      <td><%= @book.author %></td>
+    </tr>
+    <tr>
+      <th>Genre</th>
+      <td><%= @book.genre %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= @book.price %></td>
+    </tr>
+    <tr>
+      <th>Date Published</th>
+      <td><%= @book.publishdate %></td>
+    </tr>
+  </table>
+</div>
